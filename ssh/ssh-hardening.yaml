@@ -8,3 +8,6 @@
     ssh_permit_tunnel: "true"
     ssh_allow_tcp_forwarding: "true"
     ssh_server_enabled: "false"
+    ssh_kex: 
+      - curve25519-sha256@libssh.org
+      - diffie-hellman-group-exchange-sha256
