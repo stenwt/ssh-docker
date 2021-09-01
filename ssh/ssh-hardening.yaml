@@ -1,0 +1,10 @@
+
+- hosts: localhost
+  roles:
+    - ansible-ssh-hardening
+  vars:
+    ssh_custom_options:
+      - "Include /etc/ssh/ssh_config.d/*"
+    ssh_permit_tunnel: "true"
+    ssh_allow_tcp_forwarding: "true"
+    ssh_server_enabled: "false"
