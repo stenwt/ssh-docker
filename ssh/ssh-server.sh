@@ -8,4 +8,5 @@ for user in $USERS
   chmod 600 /home/$user/.ssh/authorized_keys && \
   chown -R $user /home/$user;
 done; 
+chmod 600 /etc/ssh/*
 /usr/sbin/sshd -D
