@@ -1,13 +1,22 @@
 
 - hosts: localhost
+  collections: 
+   - devsec.hardening
   roles:
-    - ansible-ssh-hardening
+    - ssh_hardening
   vars:
     ssh_custom_options:
       - "Include /etc/ssh/ssh_config.d/*"
-    ssh_permit_tunnel: "true"
-    ssh_allow_tcp_forwarding: "true"
-    ssh_server_enabled: "false"
+    ssh_permit_tunnel: true
+    ssh_pam_support: false
+    ssh_use_pam: false
+    ssh_gssapi_support: false
+    ssh_gssapi_delegation: false
+    ssh_print_debian_banner: false
+    ssh_allow_tcp_forwarding: true
+    ssh_banner: false
+    ssh_server_enabled: false
+    ssh_kerberos_support: false
     ssh_kex: 
       - curve25519-sha256@libssh.org
       - diffie-hellman-group-exchange-sha256

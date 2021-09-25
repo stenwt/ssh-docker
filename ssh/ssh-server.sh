@@ -1,6 +1,6 @@
-#!/bin/sh -x
+#!/bin/sh
 for user in $USERS
-  do adduser -s /bin/bash -D -h /home/$user $user && \
+  do adduser --gecos "" --disabled-password $user && \
   echo "$user:$(pwgen 32 1)" | /usr/sbin/chpasswd && \
   mkdir /home/$user/.ssh && \
   chmod 700 /home/$user/.ssh && \
