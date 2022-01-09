@@ -8,10 +8,10 @@ metadata:
 
 steps:
 - name: kaniko
-  image: banzaicloud/drone-kaniko
+  image: plugins/kaniko
   settings:
     registry: registry.home.sud0.com
-    repo: ssh
+    repo: registry.home.sud0.com/ssh
     tags: latest
     dockerfile: ssh/Dockerfile
     username:
@@ -29,10 +29,10 @@ metadata:
 
 steps:
 - name: kaniko
-  image: banzaicloud/drone-kaniko
+  image: plugins/kaniko
   settings:
     registry: registry.home.sud0.com
-    repo: sslh
+    repo: registry.home.sud0.com/sslh
     tags: latest
     dockerfile: sslh/Dockerfile
     username:
