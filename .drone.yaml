@@ -10,8 +10,8 @@ steps:
 - name: kaniko
   image: plugins/kaniko
   settings:
-    registry: registry.home.sud0.com
-    repo: registry.home.sud0.com/ssh
+    registry: registry.sud0.com
+    repo: registry.sud0.com/ssh
     tags: latest
     dockerfile: ssh/Dockerfile
     username:
@@ -31,8 +31,8 @@ steps:
 - name: kaniko
   image: plugins/kaniko
   settings:
-    registry: registry.home.sud0.com
-    repo: registry.home.sud0.com/sslh
+    registry: registry.sud0.com
+    repo: registry.sud0.com/sslh
     tags: latest
     dockerfile: sslh/Dockerfile
     username:
