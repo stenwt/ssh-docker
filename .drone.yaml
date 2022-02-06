@@ -11,6 +11,7 @@ steps:
   image: plugins/kaniko
   settings:
     registry: registry.sud0.com
+    insecure: true
     repo: registry.sud0.com/ssh
     tags: latest
     dockerfile: ssh/Dockerfile
@@ -32,6 +33,7 @@ steps:
   image: plugins/kaniko
   settings:
     registry: registry.sud0.com
+    insecure: true
     repo: registry.sud0.com/sslh
     tags: latest
     dockerfile: sslh/Dockerfile
