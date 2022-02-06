@@ -8,7 +8,7 @@ metadata:
 
 steps:
 - name: kaniko
-  image: plugins/kaniko
+  image: plugins/docker
   settings:
     registry: registry.sud0.com
     insecure: true
@@ -30,7 +30,7 @@ metadata:
 
 steps:
 - name: kaniko
-  image: plugins/kaniko
+  image: plugins/docker
   settings:
     registry: registry.sud0.com
     insecure: true
