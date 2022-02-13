@@ -41,3 +41,7 @@ steps:
       from_secret: docker_username
     password:
       from_secret: docker_password
+dns_config:
+  options:
+    - name: ndots
+      value: 1
